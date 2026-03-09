@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+     <!-- Wie bits in Zeichen interpretiert werden utf 8 Standard Web-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- viewpoint = definiert sichtbaren Bereich, Weite Seite entspricht Weite Gerät und initial-scale=1 bedeutet kein Zoom 100% --> 
+    <link rel="stylesheet" href="kleidungsspende.css">
+    <script src="kleidungsspende.css" defer></script>
+    <!--Einbinden von Bootstrap CSS entweder runterladen Bootstrap oder über Seite immer aufrufen benötigte Klassen 
+    aufrufen benötigte Klassen Internet bei großen Dateien deutlich schlechtere Performance -->
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
+    rel="stylesheet"
+    >
+    <!--Einbinden Bootstrap Elemente CSS und Javascript-->
+    <title>Kleidungsspenden.de</title>
+    <!-- Tabname -->
+    <script> src="kleidungsspenden.js"</script>
+  </head>
+
+<body class="bg-body-secondary">
+  <!-- Ganze Body soll grau sein -->
+<header>
+  <nav class="navbar navbar-expand-md navbar-light bg-light">
+    <div class="container-fluid">
+
+      <!-- Logo -->
+      <a class="navbar-brand" href="#">
+        <img src="Bilder/firmenlogo.png" alt="Firmenlogo" class="img-fluid logo-fixed">
+      </a>
+
+      <!-- Toggle Button (Hamburger) -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#mainNav"
+        aria-controls="mainNav"
+        aria-expanded="false"
+        aria-label="Navigation umschalten">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- COLLAPSED LINKS -->
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="Selbstdarstellung.html">Über uns</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Spendenformular.html">Spenden</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Hilfsprojekte.html">Hilfsprojekte</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+
+</header>
+
+
+
+
+
+
+<main>
+  <section id="Empfangsseite">
+    <!--Section um die Seite in Bereiche einzuteilen und besser lessbar zu machen -->
+    <div class="container-fluid text-start py-2 px-0 px-md-2 ">
+    <!-- Margin = Abstand Box zu Seitenrand mt=oben mb=unten ms=lins me=rechts oder py=y-Achse und px=x-Achse
+    Sobald Screen klein ist = Smartphone kein Abstand zu x-Achse sonst Abstand px-5 (Inhalt hat Abstand nach außen)
+    Abstand 0 und ab px-md Abstand 5 also ab Mittel großer Screen = Tablet i.d.R.
+    Utilities Bootstrap Klasse text, Margin, Padding um Design und Lage Text anzupassen -->
+    <h2 class="text-center">Willkommen auf der Seite, wo Spenden groß geschrieben wird</h2>
+         <div class="ratio ratio-16x9">
+            <iframe
+              src="https://embed.ted.com/talks/peter_singer_the_why_and_how_of_effective_altruism"
+              title="Infos über Spenden"
+              frameborder="0"
+            allow="autoplay; fullscreen; encrypted-media"
+            allowfullscreen>
+            <!--Wichtig /embeded/Video-ID bei Videolink einfügen angeben geht sonst nicht
+            Gefahr, dass Fehler 153 kommt also einbinden Video verboten ist -->      
+            </iframe>   
+          </div>
+          <!--Infotext nach dem Video-->
+          <p class="">gute Gründe wieso jeder spenden sollte </p>
+          
+    </div>
+  </section>
+
+
+   <section id="Kleidungsspende machen">
+    <!--Section um die Seite in Bereiche einzuteilen und besser lessbar zu machen -->
+    <div class="container-fluid text-center py-2 px-0 px-md-2 ">
+       Links Bilder und Rechts Formular 
+       Handy Version Bild und dann Formular 
+    </div>
+  </section>
+
+
+</main>
+
+<footer class="w-100 position-fixed bottom-0 bg-light py-3">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- Linke Seite: Text -->
+      <div class="col-md-6 text-start">
+        <p class="mb-0 text-dark">
+          © 2025 Kleiderspenden.de
+        </p>
+      </div>
+
+      <!-- Rechte Seite: Impressum -->
+      <div class="col-md-6 text-md-end text-start">
+        <a href="Impressum.html" class="text-dark text-decoration-none">
+          Impressum
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<!--Bootstrap Java Script benötigt damit Animationen ohne neue HTML Anfragen funktionieren-->
+</body>
+</html>

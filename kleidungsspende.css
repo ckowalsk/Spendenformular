@@ -1,0 +1,25 @@
+.logo-fixed {
+  width: 180px;
+  height: auto; 
+}
+
+.infovideospenden-fullscreen {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.infovideospenden-fullscreen iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+
+/* vh= viewpointheight also 20% der Bildschirm Höhe (wir haben HTML main als Inhalt Klasse definiert hier Regeln dafür  */
+.Inhalt {
+  padding-bottom: 8vh; /* Höhe des Footers */
+}
