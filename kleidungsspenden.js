@@ -125,16 +125,19 @@ ButtonSpeichern.addEventListener("click",() => {
                     
 //Speichern der Werte in ein Objekt und Ausgabe der gespeichertern Werte                   
       if (selectedValueAbgabeart==="Übergabe an Geschäftsstelle") {
+          const now = new Date();
           let Daten = {
               status: "erfolgreich gespeichert",
               Kleidungserhalt: selectedValueAbgabeart,
               Kriesengebiet: selectedValueKrisengebiet,
+              Zeit:now,
               Kleidungsart: selectedValueKleidungsart
             };
             alert(
               "status: " + Daten.status + "\n" +
               "Kleidungerhalt: " + Daten.Kleidungserhalt + "\n" +
               "Kriesengebiet: " + Daten.Kriesengebiet + "\n" +
+              "Zeit:" + Daten.Zeit + "\n" +
               "Kleidungsart: " + Daten.Kleidungsart
             );
       } else {
@@ -175,6 +178,8 @@ ButtonSpeichern.addEventListener("click",() => {
                 break;
           }    
 
+          const now = new Date();
+
           let Daten= {
               status: "erfolgreich gespeichert",
               Kleidungserhalt: selectedValueAbgabeart,
@@ -184,6 +189,7 @@ ButtonSpeichern.addEventListener("click",() => {
               Hausnummer: txtHausnummer,
               Postleitzahl: txtPLZ,
               Ort:txtOrt,
+              Zeit:now,
               ZuständigeStellePLZ: verantwortlichestelle
               };
 
@@ -195,6 +201,7 @@ ButtonSpeichern.addEventListener("click",() => {
                 "Straßenname: " + Daten.Straßenname + "\n" +
                 "Hausnummer: " + Daten.Hausnummer + "\n" +
                 "Postleitzahl:" + Daten.Postleitzahl + "\n" +
+                "Zeit:" + Daten.Zeit + "\n" +
                 "Ort: " + Daten.Ort
               );
             }  

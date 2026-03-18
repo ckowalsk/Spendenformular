@@ -5,8 +5,6 @@
      <!-- Wie bits in Zeichen interpretiert werden utf 8 Standard Web-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- viewpoint = definiert sichtbaren Bereich, Weite Seite entspricht Weite Gerät und initial-scale=1 bedeutet kein Zoom 100% --> 
-    <link rel="stylesheet" href="kleidungsspende.css">
-    <script src="kleidungsspende.css" defer></script>
     <!--Einbinden von Bootstrap CSS entweder runterladen Bootstrap oder über Seite immer aufrufen benötigte Klassen 
     aufrufen benötigte Klassen Internet bei großen Dateien deutlich schlechtere Performance -->
     <link
@@ -22,12 +20,11 @@
 <body class="bg-body-secondary">
   <!-- Ganze Body soll grau sein -->
 <header>
-  <nav class="navbar navbar-expand-md navbar-light bg-light">
-    <div class="container-fluid">
-
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
       <!-- Logo -->
       <a class="navbar-brand" href="#">
-        <img src="Kleiderspenden/Bilder/firmenlogo.png" alt="Firmenlogo" class="img-fluid logo-fixed">
+        <img src="Kleiderspenden/Bilder/firmenlogo.png" alt="Firmenlogo" width="120" height="90">
       </a>
 
       <!-- Toggle Button (Hamburger) -->
@@ -56,9 +53,9 @@
           </li>
         </ul>
       </div>
-
+    </nav>
     </div>
-  </nav>
+  
 
 
 </header>
@@ -71,14 +68,39 @@
 <main>
   <section id="Hilfsprojekte">
     <!--Section um die Seite in Bereiche einzuteilen und besser lessbar zu machen -->
-    <div class="container-fluid text-start py-2 px-0 px-md-2 ">
+    <div class="container-sm">
     <!-- Margin = Abstand Box zu Seitenrand mt=oben mb=unten ms=lins me=rechts oder py=y-Achse und px=x-Achse
     Sobald Screen klein ist = Smartphone kein Abstand zu x-Achse sonst Abstand px-5 (Inhalt hat Abstand nach außen)
     Abstand 0 und ab px-md Abstand 5 also ab Mittel großer Screen = Tablet i.d.R.
     Utilities Bootstrap Klasse text, Margin, Padding um Design und Lage Text anzupassen -->
     <h1 class="text-center">Erfahren Sie mehr über unsere spannende Hilfsprojekte</h1>
-  </section>
 
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Land</th>
+      <th scope="col">Projekt</th>
+      <th scope="col">Verantwortlicher</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Philippinen</td>
+      <td>Kleiderspenden 1212</td>
+      <td>Herr Fritz Mayer</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Ghana</td>
+      <td>Kleiderspenden 23233</td>
+      <td>Herr Netter Mustermann </td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
 </main>
 
 
