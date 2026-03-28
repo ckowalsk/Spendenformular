@@ -133,13 +133,21 @@ ButtonSpeichern.addEventListener("click",() => {
               Zeit:now,
               Kleidungsart: selectedValueKleidungsart
             };
-            alert(
-              "status: " + Daten.status + "\n" +
-              "Kleidungerhalt: " + Daten.Kleidungserhalt + "\n" +
-              "Kriesengebiet: " + Daten.Kriesengebiet + "\n" +
-              "Zeit:" + Daten.Zeit + "\n" +
-              "Kleidungsart: " + Daten.Kleidungsart
-            );
+
+            //localStorage Speichert Daten um diese in neuer Webseite zu haben löschen über localStorage.removeItem();
+            localStorage.setItem("Daten", JSON.stringify(Daten));
+            window.location.replace("Registrierungsbestaetigung.html");
+            
+            //Ausgabe über Window oberhalb 
+            //alert(
+              //"status: " + Daten.status + "\n" +
+              //"Kleidungerhalt: " + Daten.Kleidungserhalt + "\n" +
+              //"Kriesengebiet: " + Daten.Kriesengebiet + "\n" +
+              //"Zeit:" + Daten.Zeit + "\n" +
+              //"Kleidungsart: " + Daten.Kleidungsart
+            //);
+            
+
       } else {
  //Einlesen der Addresswerte nur nötig, wenn Kunde Abholung auswählt, deswegen nur im else 
           const txtStraßenname = document.getElementById("InputStraßenname").value.trim();  
@@ -179,7 +187,6 @@ ButtonSpeichern.addEventListener("click",() => {
           }    
 
           const now = new Date();
-
           let Daten= {
               status: "erfolgreich gespeichert",
               Kleidungserhalt: selectedValueAbgabeart,
@@ -193,19 +200,27 @@ ButtonSpeichern.addEventListener("click",() => {
               ZuständigeStellePLZ: verantwortlichestelle
               };
 
-            alert(
-                "status: " + Daten.status + "\n" +
-                "Kleidungerhalt: " + Daten.Kleidungserhalt + "\n" +
-                "Kriesengebiet: " + Daten.Kriesengebiet + "\n" +
-                "Kleidungsart: " + Daten.Kleidungsart + "\n" +
-                "Straßenname: " + Daten.Straßenname + "\n" +
-                "Hausnummer: " + Daten.Hausnummer + "\n" +
-                "Postleitzahl:" + Daten.Postleitzahl + "\n" +
-                "Zeit:" + Daten.Zeit + "\n" +
-                "Ort: " + Daten.Ort
-              );
-            }  
+
+            localStorage.setItem("Daten", JSON.stringify(Daten));
+            window.location.replace("Registrierungsbestaetigung.html");
+
+            //alert(
+                //"status: " + Daten.status + "\n" +
+                //"Kleidungerhalt: " + Daten.Kleidungserhalt + "\n" +
+                //"Kriesengebiet: " + Daten.Kriesengebiet + "\n" +
+                //"Kleidungsart: " + Daten.Kleidungsart + "\n" +
+                //"Straßenname: " + Daten.Straßenname + "\n" +
+                //"Hausnummer: " + Daten.Hausnummer + "\n" +
+                //"Postleitzahl:" + Daten.Postleitzahl + "\n" +
+                //"Zeit:" + Daten.Zeit + "\n" +
+                //"Ort: " + Daten.Ort
+              //);
+            }
+
+
+
             
+
           
 })
 //JSON Speichern nur mit Server möglich Browser kommuniziert mit Server 

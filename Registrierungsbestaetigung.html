@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+     <!-- Wie bits in Zeichen interpretiert werden utf 8 Standard Web-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- viewpoint = definiert sichtbaren Bereich, Weite Seite entspricht Weite Gerät und initial-scale=1 bedeutet kein Zoom 100% --> 
+    <link rel="stylesheet" href="kleidungsspende.css">
+    <!--Einbinden von Bootstrap CSS entweder runterladen Bootstrap oder über Seite immer aufrufen benötigte Klassen 
+    aufrufen benötigte Klassen Internet bei großen Dateien deutlich schlechtere Performance -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" defer></script>
+    <!--Bootstrap Java Script benötigt damit Animationen ohne neue HTML Anfragen funktionieren-->
+    <script src="kleidungsspenden.js" defer></script>
+    <!--Persönliches Skript kann Ende Body oder Head stehen 
+    Wenn Ende Body steht wird als erstes HTML eingelesen dann Skript (ältere Version)
+    wenn Anfangs steht als erstes Skript dann Html (moderner)-->
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
+    rel="stylesheet"
+    >
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    >
+    <!--Einbinden Bootstrap Elemente CSS und Javascript-->
+    <title>Kleidungsspenden.de</title>
+    <!-- Tabname -->
+  </head>
+
+  <body>
+        <main>
+         <!--vw da Prozent reagiert ein responsiv--> 
+            <textarea id="InputRegistrierungswerte" style="width: 80vw; height: 40vw;" readonly></textarea>
+            
+<!--Daten werden empfangen von JavaScript und abgerufen-->
+                <script>
+
+
+                document.addEventListener("DOMContentLoaded", function () {
+                        let Daten = JSON.parse(localStorage.getItem("Daten"));
+                        if (Daten.Kleidungserhalt = "Übergabe an Geschäftsstelle") {
+                            document.getElementById("InputRegistrierungswerte").value =
+                            "Vielen Dank für die Kleidungsregistrierung: " + "\n\n" +
+                            "Status: " + Daten.status + "\n" +
+                            "Datum erhalt Daten: " + Daten.Zeit + "\n" +
+                            "Art der Übergabe: " + Daten.Kleidungserhalt + "\n" +
+                            "Art der Kleidung: " + Daten.Kleidungsart + "\n" + 
+                            "Krisengebiet: " + Daten.Kriesengebiet;
+                        }
+                        else{
+                            document.getElementById("InputRegistrierungswerte").value =
+                            "Vielen Dank für die Kleidungsregistrierung: " + "\n\n" +
+                            "Status: " + Daten.status + "\n" +
+                            "Datum erhalt Daten: " + Daten.Zeit + "\n" +
+                            "Art der Übergabe: " + Daten.Kleidungserhalt + "\n" +
+                            "Art der Kleidung: " + Daten.Kleidungsart + "\n" +
+                            "Krisengebiet " + Daten.Kriesengebiet + "\n" +
+                            "Straßenname: " + Daten.Straßenname + "\n" +
+                            "Hausnummer: " + Daten.Hausnummer + "\n" +
+                            "Postleitzahl: " + Daten.Postleitzahl + "\n" +
+                            "Ort: " + Daten.Ort + "\n" + 
+                            "Zuständige Stelle Postleitzahl: " + Daten.ZuständigeStellePLZ; 
+                        }
+                });
+
+
+
+                </script>
+
+        </main>
+             
+  </body>
