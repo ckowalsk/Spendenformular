@@ -38,7 +38,7 @@
 
                 document.addEventListener("DOMContentLoaded", function () {
                         let Daten = JSON.parse(localStorage.getItem("Daten"));
-                        if (Daten.Kleidungserhalt = "Übergabe an Geschäftsstelle") {
+                        if (Daten.Kleidungserhalt === "Übergabe an Geschäftsstelle") {
                             document.getElementById("InputRegistrierungswerte").value =
                             "Vielen Dank für die Kleidungsregistrierung: " + "\n\n" +
                             "Status: " + Daten.status + "\n" +
